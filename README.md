@@ -165,4 +165,10 @@ This educational material is provided for legitimate cybersecurity learning purp
 
 ---
 
+## 📧 Contact Information
+
+**Author**: Vandit Naman Shah
+
+**Focus Areas**: Network Security, Quantum Cryptography, CyberSecurity, GRC
+
 **🔐 Remember: The best defense is understanding the attack.**
