@@ -1,0 +1,39 @@
+# Hashcat Rule-Based Attack Results
+# Session: Educational Lab Exercise 2
+# Date: 2025-01-15 15:45:22
+# Attack Mode: Dictionary Attack with Rules (-a 0 -r best64.rule)
+# Hash Type: MD5 (mode 0)
+# Target: sample_hashes.txt
+# Wordlist: rockyou.txt (top 10000)
+# Rules: best64.rule (64 most effective rules)
+# Duration: 00:15:28
+
+=== NEWLY CRACKED PASSWORDS (Rule-based) ===
+482c811da5d5b4bc6d497ffa98491e38:password123  # base: password + rule: $1$2$3
+8d969eef6ecad3c29a3a629280e686cf:Hello123    # base: hello + rules: c$1$2$3
+25f9e794323b453885f5181f1b624d0b:Welcome!    # base: welcome + rule: c$!
+f25a2fc72690b780b2a14dc17ebe4da6:SECRET99    # base: secret + rules: u$9$9
+b7a7c8b0f5e4d6c8a9b0c1d2e3f4g5h6:P@ssw0rd   # base: password + rules: csa@so0
+
+=== CUMULATIVE STATISTICS ===
+Previous Cracked (Dictionary): 9
+Newly Cracked (Rules): 5
+Total Cracked: 14
+Total Hashes: 15
+Success Rate: 93.3%
+Remaining Uncracked: 1
+
+=== RULE EFFECTIVENESS ANALYSIS ===
+Most Effective Rules:
+1. c$1$2$3 (capitalize + append 123) - 2 cracks
+2. c$! (capitalize + append !) - 1 crack
+3. csa@so0 (capitalize + leet speak) - 1 crack
+4. u$9$9 (uppercase + append 99) - 1 crack
+
+=== PERFORMANCE METRICS ===
+Total Time: 15 minutes 28 seconds
+Rules Applied: 64 per word
+Combinations Tested: ~640,000
+Average Speed: 22,500 MH/s
+GPU Utilization: 98%
+Temperature: 74°C

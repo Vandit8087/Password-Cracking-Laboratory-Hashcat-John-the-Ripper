@@ -1,0 +1,40 @@
+John the Ripper Attack Results
+Session: Educational Lab Exercise 1
+Date: 2025-01-15 14:35:10
+Format: Raw-MD5
+Wordlist: rockyou.txt (top 1000)
+Rules: None (basic dictionary attack)
+
+Loaded 15 password hashes with 15 different salts (Raw-MD5 [MD5 256/256 AVX2 8x3])
+
+Press 'q' or Ctrl-C to abort, almost any other key for status
+
+password         (hash1)
+123456           (hash2)
+admin            (hash3)
+letmein          (hash4)
+qwerty           (hash5)
+hello            (hash6)
+welcome          (hash7)
+test123          (hash8)
+secret           (hash9)
+
+9g 0:00:00:35 DONE (2025-01-15 14:35) 0.2571g/s 257100p/s 257100c/s 3884KC/s
+Use the "--show" option to display all of the cracked passwords reliably
+
+Session completed successfully.
+
+=== CRACKED PASSWORD SUMMARY ===
+password
+123456
+admin
+letmein
+qwerty
+hello
+welcome
+test123
+secret
+
+Total: 9 passwords cracked out of 15 (60% success rate)
+Time: 35 seconds
+Rate: 0.26 passwords/second

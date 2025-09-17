@@ -1,0 +1,59 @@
+# Password Cracking Performance Benchmark
+# System: Intel i7-12700K, 32GB RAM, RTX 3080
+# Date: 2025-01-15 20:15:00
+# Tools: Hashcat 6.2.6, John the Ripper 1.9.0-jumbo-1
+
+=== HASHCAT BENCHMARK RESULTS ===
+
+Hash Type          | Mode | Speed (H/s)  | GPU Util | Temp
+-------------------|------|--------------|----------|------
+MD5                | 0    | 28.5 GH/s    | 100%     | 78°C
+SHA1               | 100  | 9.8 GH/s     | 100%     | 79°C  
+SHA256             | 1400 | 3.6 GH/s     | 100%     | 81°C
+SHA512             | 1700 | 1.2 GH/s     | 100%     | 82°C
+NTLM               | 1000 | 25.2 GH/s    | 100%     | 77°C
+bcrypt (cost 12)   | 3200 | 285 H/s      | 95%      | 75°C
+scrypt             | 8900 | 1.8 KH/s     | 90%      | 74°C
+Argon2             | 34000| 12 H/s       | 85%      | 73°C
+
+=== JOHN THE RIPPER BENCHMARK RESULTS ===
+
+Hash Format        | Speed (c/s)  | CPU Util | Notes
+-------------------|--------------|----------|------------------
+MD5                | 2.1 MC/s     | 100%     | 12 threads
+SHA1               | 1.8 MC/s     | 100%     | 12 threads
+SHA256             | 890 KC/s     | 100%     | 12 threads
+SHA512             | 320 KC/s     | 100%     | 12 threads
+bcrypt (cost 12)   | 180 c/s      | 100%     | 12 threads
+NTLM               | 1.9 MC/s     | 100%     | 12 threads
+
+=== REAL-WORLD ATTACK SIMULATION ===
+
+Target: 1000 MD5 hashes (simulated corporate breach)
+Wordlist: rockyou.txt (14M passwords)
+
+Tool     | Time    | Cracked | Success Rate | Speed
+---------|---------|---------|--------------|-------
+Hashcat  | 8 min   | 847     | 84.7%        | 28.5 GH/s
+John     | 112 min | 845     | 84.5%        | 2.1 MC/s
+
+GPU Acceleration Advantage: 14x faster for MD5
+
+=== POWER CONSUMPTION ANALYSIS ===
+Idle System: 85W
+CPU Only (John): 165W (+80W)
+GPU Accelerated (Hashcat): 385W (+300W)
+
+Performance per Watt:
+- Hashcat: 74 MH/s per Watt
+- John: 13 KC/s per Watt
+
+=== MEMORY USAGE ===
+Hashcat: 2.1GB VRAM, 1.4GB RAM
+John: 0.8GB RAM
+
+=== CONCLUSION ===
+- GPU acceleration provides 10-20x performance improvement for fast hashes
+- Memory-hard algorithms (bcrypt, Argon2) reduce GPU advantage significantly  
+- Power consumption increases substantially with GPU usage
+- Both tools are highly effective for their respective strengths

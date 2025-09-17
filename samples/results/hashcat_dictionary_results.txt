@@ -1,0 +1,35 @@
+# Hashcat Attack Results
+# Session: Educational Lab Exercise 1
+# Date: 2025-01-15 14:30:25
+# Attack Mode: Dictionary Attack (-a 0)
+# Hash Type: MD5 (mode 0)
+# Target: sample_hashes.txt
+# Wordlist: rockyou.txt (top 1000 passwords)
+# Duration: 00:00:42
+
+=== CRACKED PASSWORDS ===
+5f4dcc3b5aa765d61d8327deb882cf99:password
+e10adc3949ba59abbe56e057f20f883e:123456
+21232f297a57a5a743894a0e4a801fc3:admin
+0d107d09f5bbe40cade3de5c71e9e9b7:letmein
+d8578edf8458ce06fbc5bb76a58c5ca4:qwerty
+5d41402abc4b2a76b9719d911017c592:hello
+40be4e59b9a2a2b5dffb918c0e86b3d7:welcome
+cc03e747a6afbbcbf8be7668acfebee5:test123
+5ebe2294ecd0e0f08eab7690d2a6ee69:secret
+
+=== ATTACK STATISTICS ===
+Total Hashes: 15
+Cracked: 9
+Success Rate: 60.0%
+Time Elapsed: 42 seconds
+Speed: ~25,000 MH/s (GPU accelerated)
+Passwords/Second: ~23,800
+
+=== REMAINING UNCRACKED ===
+482c811da5d5b4bc6d497ffa98491e38  # password123 (not in top 1000)
+8d969eef6ecad3c29a3a629280e686cf  # hello123 (not in wordlist)
+25f9e794323b453885f5181f1b624d0b  # Welcome1! (complex pattern)
+f25a2fc72690b780b2a14dc17ebe4da6  # Summer2023! (seasonal + year)
+aab5f71ce16ac5e50c54ad97b6a11b7b  # Admin@2023 (corporate pattern)
+3c9e5b5e8b5c5d5e7b5c4d3e2a1b0c9d  # unknown pattern
