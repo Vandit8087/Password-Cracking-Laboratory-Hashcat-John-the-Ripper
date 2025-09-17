@@ -1,0 +1,15 @@
+Feature,Hashcat,John_the_Ripper,Hydra,Medusa,Ncrack
+Speed (GPU),Excellent,Good,N/A,N/A,N/A
+Speed (CPU),Good,Excellent,Good,Good,Good
+Hash Types Supported,300+,200+,N/A,N/A,N/A
+Attack Modes,9 modes,7 modes,Dictionary,Dictionary,Dictionary
+Rule Engine,Advanced,Good,Basic,Basic,Basic
+Distributed Cracking,Yes,Limited,No,No,No
+User Interface,CLI only,CLI only,CLI only,CLI only,CLI only
+Learning Curve,Medium,Easy,Easy,Easy,Easy
+Cost,Free,Free/Pro,Free,Free,Free
+Community Support,Large,Large,Medium,Small,Small
+Documentation Quality,Excellent,Good,Good,Fair,Fair
+Platform Support,Multi-platform,Multi-platform,Multi-platform,Multi-platform,Multi-platform
+Network Protocol Support,No,No,Extensive,Extensive,Extensive
+Session Management,Good,Excellent,Basic,Basic,Basic

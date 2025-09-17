@@ -1,0 +1,16 @@
+Defense_Method,Effectiveness,Implementation_Cost,Maintenance_Effort,User_Impact,Technical_Complexity
+Strong Password Policies,High,Low,Medium,Medium,Low
+Multi-Factor Authentication (MFA),Very High,Medium,Low,Medium,Medium
+Account Lockout Mechanisms,Medium,Low,Low,Low,Low
+Password Salting,High,Low,Low,None,Medium
+Secure Hashing Algorithms,Very High,Low,Low,None,Medium
+Rate Limiting,Medium,Low,Low,Low,Medium
+Password Managers,Very High,Medium,Medium,High,Low
+Regular Security Audits,High,High,High,Low,High
+User Education,Medium,Low,High,Low,Low
+Monitoring and Alerting,High,Medium,Medium,None,High
+Biometric Authentication,Very High,High,Medium,Medium,High
+Hardware Security Keys,Very High,High,Low,Medium,Medium
+Passwordless Authentication,Very High,High,Medium,High,High
+AI-Based Anomaly Detection,High,High,Medium,None,Very High
+Zero Trust Architecture,Very High,Very High,High,Medium,Very High

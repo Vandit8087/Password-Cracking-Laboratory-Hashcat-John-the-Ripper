@@ -1,0 +1,10 @@
+Phase,Duration,Success_Probability,Description,Resource_Usage,Skill_Level
+Reconnaissance,1-5 minutes,0,Hash identification and wordlist preparation,Low,Beginner
+Dictionary Attack,5-30 minutes,60,Common passwords from rockyou.txt,Low,Beginner
+Rule-based Attack,1-6 hours,80,Dictionary + common transformations,Medium,Intermediate
+Hybrid Attack,6-24 hours,90,Dictionary + mask combinations,Medium-High,Intermediate
+Brute Force,24+ hours,95,All possible character combinations,High,Advanced
+Advanced Techniques,Days/Weeks,99,Custom rules and targeted attacks,Very High,Expert
+Statistical Analysis,Hours,85,Pattern analysis and intelligent guessing,Medium,Advanced
+Rainbow Tables,Minutes-Hours,75,Pre-computed hash lookups,Very High Storage,Intermediate
+Distributed Cracking,Variable,98,Multiple systems coordinated attack,Very High,Expert

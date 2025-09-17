@@ -1,0 +1,15 @@
+Algorithm,Output_Size_Bits,Year_Introduced,Security_Status,Recommended_Use,Vulnerability_Level
+MD5,128,1991,Broken,None - Legacy only,Critical
+SHA-1,160,1995,Deprecated,None - Legacy only,High
+SHA-256,256,2001,Secure,General purpose hashing,Low
+SHA-512,512,2001,Secure,High security applications,Low
+SHA-3,Variable,2015,Secure,Next-gen applications,Very Low
+bcrypt,Variable,1999,Secure,Password hashing,Low
+scrypt,Variable,2009,Secure,Password hashing,Low
+Argon2,Variable,2015,Secure,Password hashing (recommended),Very Low
+PBKDF2,Variable,2000,Secure,Key derivation,Medium-Low
+NTLM,128,1993,Weak,Windows legacy,High
+LM,64,1987,Broken,None - extremely weak,Critical
+CRC32,32,1975,Broken,Checksums only,Critical
+Whirlpool,512,2000,Secure,Specialized applications,Low
+RIPEMD-160,160,1996,Secure,Limited use,Medium-Low
