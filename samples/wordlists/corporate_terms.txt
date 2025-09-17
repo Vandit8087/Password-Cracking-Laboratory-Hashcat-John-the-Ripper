@@ -1,0 +1,34 @@
+# Corporate Terms Wordlist
+# Business-related terms often used in corporate passwords
+# Useful for targeted attacks in corporate environments
+
+company
+corporation
+business
+enterprise
+solutions
+systems
+technology
+services
+consulting
+management
+office
+building
+headquarters
+branch
+department
+finance
+accounting
+marketing
+sales
+support
+admin
+administrator
+manager
+director
+executive
+employee
+staff
+team
+group
+division

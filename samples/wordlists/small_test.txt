@@ -1,0 +1,24 @@
+# Small Test Wordlist
+# Common weak passwords for educational testing
+# Use with caution - for authorized testing only
+
+password
+123456
+admin
+test
+guest
+hello
+world
+welcome
+secret
+login
+user
+default
+root
+toor
+pass
+qwerty
+letmein
+monkey
+dragon
+princess

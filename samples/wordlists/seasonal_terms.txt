@@ -1,0 +1,33 @@
+# Seasonal Terms Wordlist
+# Time-related words commonly used in passwords
+
+spring
+summer
+autumn
+winter
+january
+february
+march
+april
+may
+june
+july
+august
+september
+october
+november
+december
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday
+holiday
+vacation
+christmas
+halloween
+thanksgiving
+newyear
+birthday

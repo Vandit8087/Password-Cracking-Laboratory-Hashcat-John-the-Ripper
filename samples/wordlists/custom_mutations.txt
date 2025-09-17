@@ -1,0 +1,36 @@
+# Custom Password Mutations
+# Common password transformations observed in breaches
+# Format: base_word -> mutated_versions
+
+password:
+  Password
+  PASSWORD
+  p@ssword
+  passw0rd
+  password1
+  password!
+
+admin:
+  Admin
+  ADMIN
+  @dmin
+  4dmin
+  admin1
+  admin123
+
+welcome:
+  Welcome
+  WELCOME
+  w3lcome
+  welc0me
+  welcome1
+  welcome!
+
+secret:
+  Secret
+  SECRET
+  s3cret
+  secr3t
+  secret1
+  secret123
+
