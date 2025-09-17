@@ -1,0 +1,324 @@
+# Advanced Hashcat Rules for Educational Password Cracking
+# Designed for comprehensive password pattern analysis
+
+# === BASIC TRANSFORMATIONS ===
+:
+# Identity - no change
+c
+# Capitalize first character
+u  
+# Convert to uppercase
+l
+# Convert to lowercase
+C
+# Invert case of all characters
+t
+# Toggle case of all characters
+TN
+# Toggle case of character at position N
+
+# === APPEND OPERATIONS ===
+$0 $1 $2 $3 $4 $5 $6 $7 $8 $9
+# Append all digits 0-9
+$!
+# Append exclamation mark
+$@
+# Append at symbol
+$#
+# Append hash symbol
+$$
+# Append dollar sign
+$%
+# Append percent symbol
+$^
+# Append caret symbol
+$&
+# Append ampersand
+$*
+# Append asterisk
+$-
+# Append hyphen
+$_
+# Append underscore
+$=
+# Append equals sign
+$+
+# Append plus sign
+
+# === PREPEND OPERATIONS ===
+^0 ^1 ^2 ^3 ^4 ^5 ^6 ^7 ^8 ^9
+# Prepend all digits 0-9
+^!
+# Prepend exclamation mark
+^@
+# Prepend at symbol
+^#
+# Prepend hash symbol
+^$
+# Prepend dollar sign
+
+# === SUBSTITUTION RULES ===
+# Common leet speak substitutions
+sa@
+# Substitute a -> @
+sa4
+# Substitute a -> 4
+se3
+# Substitute e -> 3
+si1
+# Substitute i -> 1
+si!
+# Substitute i -> !
+so0
+# Substitute o -> 0
+ss$
+# Substitute s -> $
+ss5
+# Substitute s -> 5
+st7
+# Substitute t -> 7
+st+
+# Substitute t -> +
+sg9
+# Substitute g -> 9
+sg6
+# Substitute g -> 6
+sb6
+# Substitute b -> 6
+sb8
+# Substitute b -> 8
+sz2
+# Substitute z -> 2
+sl1
+# Substitute l -> 1
+sl|
+# Substitute l -> |
+
+# === COMPLEX YEAR PATTERNS ===
+$1 $9 $9 $0
+$1 $9 $9 $1
+$1 $9 $9 $2
+$1 $9 $9 $3
+$1 $9 $9 $4
+$1 $9 $9 $5
+$1 $9 $9 $6
+$1 $9 $9 $7
+$1 $9 $9 $8
+$1 $9 $9 $9
+$2 $0 $0 $0
+$2 $0 $0 $1
+$2 $0 $0 $2
+$2 $0 $0 $3
+$2 $0 $0 $4
+$2 $0 $0 $5
+$2 $0 $1 $0
+$2 $0 $2 $0
+$2 $0 $2 $1
+$2 $0 $2 $2
+$2 $0 $2 $3
+$2 $0 $2 $4
+$2 $0 $2 $5
+
+# === COMMON NUMBER SEQUENCES ===
+$1 $2 $3
+# Append 123
+$3 $2 $1
+# Append 321
+$1 $2 $3 $4
+# Append 1234
+$4 $3 $2 $1
+# Append 4321
+$1 $2 $3 $4 $5
+# Append 12345
+$0 $1 $2 $3
+# Append 0123
+$9 $8 $7
+# Append 987
+$6 $6 $6
+# Append 666
+$7 $7 $7
+# Append 777
+$8 $8 $8
+# Append 888
+$9 $9 $9
+# Append 999
+
+# === SEASONAL/TEMPORAL PATTERNS ===
+$s $p $r $i $n $g
+# Append 'spring'
+$s $u $m $m $e $r  
+# Append 'summer'
+$f $a $l $l
+# Append 'fall'
+$w $i $n $t $e $r
+# Append 'winter'
+$j $a $n
+# Append 'jan'
+$f $e $b
+# Append 'feb'
+$m $a $r
+# Append 'mar'
+$a $p $r
+# Append 'apr'
+$m $a $y
+# Append 'may'
+$j $u $n
+# Append 'jun'
+$j $u $l
+# Append 'jul'
+$a $u $g
+# Append 'aug'
+$s $e $p
+# Append 'sep'
+$o $c $t
+# Append 'oct'
+$n $o $v
+# Append 'nov'
+$d $e $c
+# Append 'dec'
+
+# === CORPORATE/PROFESSIONAL PATTERNS ===
+$c $o $r $p
+# Append 'corp'
+$i $n $c
+# Append 'inc'
+$l $t $d
+# Append 'ltd'
+$l $l $c
+# Append 'llc'
+$c $o $m
+# Append 'com'
+$o $r $g
+# Append 'org'
+$n $e $t
+# Append 'net'
+$g $o $v
+# Append 'gov'
+$a $d $m $i $n
+# Append 'admin'
+$u $s $e $r
+# Append 'user'
+$t $e $s $t
+# Append 'test'
+
+# === MULTI-STEP TRANSFORMATIONS ===
+c $1 $2 $3
+# Capitalize + 123
+c $!
+# Capitalize + !
+c $1 $!
+# Capitalize + 1!
+c sa@ $1
+# Capitalize + a->@ + 1
+c se3 $1
+# Capitalize + e->3 + 1
+c sa@ se3 $!
+# Capitalize + leet + !
+u $! $! $!
+# Uppercase + !!!
+l $1 $2 $3 $!
+# Lowercase + 123!
+c so0 $1
+# Capitalize + o->0 + 1
+c sa@ se3 si1 so0
+# Capitalize + full leet
+c sa@ se3 si1 so0 $2 $0 $2 $3
+# Capitalize + leet + 2023
+
+# === KEYBOARD PATTERNS ===
+$q $w $e $r $t $y
+# Append 'qwerty'
+$a $s $d $f
+# Append 'asdf'
+$z $x $c $v
+# Append 'zxcv'
+$1 $2 $3 $q $w $e
+# Append '123qwe'
+$q $a $z
+# Append 'qaz'
+$w $s $x
+# Append 'wsx'
+$e $d $c
+# Append 'edc'
+
+# === REVERSE AND DUPLICATION ===
+R
+# Reverse the word
+d
+# Duplicate the word
+*0N
+# Duplicate word N times
+
+# === DELETION PATTERNS ===
+D1
+# Delete first character
+D2
+# Delete first 2 characters
+D3
+# Delete first 3 characters
+DN
+# Delete first N characters
+]
+# Delete last character
+]2
+# Delete last 2 characters
+
+# === INSERTION PATTERNS ===
+i1@
+# Insert @ at position 1
+i2!
+# Insert ! at position 2
+i31
+# Insert 1 at position 3
+iN0
+# Insert 0 at position N
+
+# === COMPLEX CORPORATE RULES ===
+c $2 $0 $2 $3 $!
+# Capitalize + 2023!
+c $@ $2 $0 $2 $3
+# Capitalize + @2023
+c sa@ $2 $0 $2 $3
+# Capitalize + a->@ + 2023
+u $! $2 $0 $2 $3
+# Uppercase + !2023
+c $c $o $m $p $a $n $y
+# Append 'company'
+c $w $o $r $k
+# Append 'work'
+c $o $f $f $i $c $e
+# Append 'office'
+
+# === ADVANCED PATTERNS ===
+c sa@ se3 si1 so0 st7 $! $2 $0 $2 $3
+# Full leet + special + year
+c D1 $a $d $m $i $n
+# Capitalize, remove first char, add 'admin'
+l *2 $1 $2 $3
+# Lowercase, duplicate, add 123
+u R $! $! $!
+# Uppercase, reverse, add !!!
+c sa@ $1 $2 $3 $4 $5
+# Capitalize + leet + 12345
+c se3 si1 $q $w $e $r $t $y
+# Capitalize + leet + qwerty
+
+# === SECURITY INDUSTRY SPECIFIC ===
+$s $e $c $u $r $e
+# Append 'secure'
+$p $a $s $s
+# Append 'pass'
+$l $o $g $i $n
+# Append 'login'
+$a $c $c $e $s $s
+# Append 'access'
+$k $e $y
+# Append 'key'
+$l $o $c $k
+# Append 'lock'
+$s $a $f $e
+# Append 'safe'
+$h $a $s $h
+# Append 'hash'
+$c $r $y $p $t
+# Append 'crypt'

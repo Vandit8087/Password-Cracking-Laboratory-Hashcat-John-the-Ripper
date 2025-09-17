@@ -1,0 +1,179 @@
+# Custom Hashcat Rules for Password Cracking Laboratory
+
+# Basic transformations
+:
+# No change (identity rule)
+
+# Case transformations
+c
+# Capitalize first letter
+u
+# Convert to uppercase
+l
+# Convert to lowercase
+C
+# Invert case of all characters
+
+# Prepend/Append single characters
+$1
+# Append '1'
+$2
+# Append '2'
+$3
+# Append '3'
+$!
+# Append '!'
+$@
+# Append '@'
+$$
+# Append '$'
+^1
+# Prepend '1'
+^2
+# Prepend '2'
+
+# Common substitutions
+so0
+# Substitute 's' with '0'
+sa@
+# Substitute 'a' with '@'
+se3
+# Substitute 'e' with '3'
+si1
+# Substitute 'i' with '1'
+sl1
+# Substitute 'l' with '1'
+st7
+# Substitute 't' with '7'
+sg9
+# Substitute 'g' with '9'
+sb6
+# Substitute 'b' with '6'
+
+# Year combinations
+$2 $0 $2 $3
+# Append '2023'
+$2 $0 $2 $4
+# Append '2024'
+$2 $0 $2 $5
+# Append '2025'
+^2 ^0 ^2 ^3
+# Prepend '2023'
+^2 ^0 ^2 ^4
+# Prepend '2024'
+
+# Number sequences
+$1 $2 $3
+# Append '123'
+$3 $2 $1
+# Append '321'
+$1 $2 $3 $4
+# Append '1234'
+^1 ^2 ^3
+# Prepend '123'
+
+# Special character combinations
+$! $@ $#
+# Append '!@#'
+$@ $# $%
+# Append '@#%'
+^! ^@ ^#
+# Prepend '!@#'
+
+# Complex transformations
+c $1 $2 $3
+# Capitalize and append '123'
+c $!
+# Capitalize and append '!'
+c sa@ $1
+# Capitalize, substitute 'a' with '@', and append '1'
+u $! $! $!
+# Uppercase and append '!!!'
+
+# Common password patterns
+c so0 $1
+# Capitalize, substitute 's' with '0', append '1'
+c sa@ se3 $!
+# Capitalize, substitute 'a' with '@', 'e' with '3', append '!'
+l $1 $2 $3 $!
+# Lowercase, append '123!'
+
+# Leet speak combinations
+sa@ se3 si1 so0
+# Multiple leet substitutions
+sa@ se3 si1 so0 st7
+# Extended leet substitutions
+sa4 se3 si1 so0 st7 sg9
+# Full leet alphabet
+
+# Company/Organization patterns
+c $2 $0 $2 $3 $!
+# Capitalize, append '2023!'
+c $@ $c $o $m
+# Capitalize, append '@com'
+u $! $2 $0 $2 $3
+# Uppercase, append '!2023'
+
+# Double transformations
+c D3
+# Capitalize and delete 3rd character
+c D2 D1
+# Capitalize and delete first 2 characters
+c *23
+# Capitalize and duplicate entire word 2-3 times
+
+# Season/Time based
+c $s $u $m $m $e $r
+# Capitalize and append 'summer'
+c $w $i $n $t $e $r
+# Capitalize and append 'winter'
+c $m $o $n $d $a $y
+# Capitalize and append 'monday'
+
+# Corporate transformations
+c $c $o $r $p
+# Capitalize and append 'corp'
+c $i $n $c
+# Capitalize and append 'inc'
+c $l $t $d
+# Capitalize and append 'ltd'
+
+# Security-focused rules
+c se3 sa@ $! $2 $0 $2 $3
+# Complex transformation: Capitalize, leet, year, special
+u D1 D1 $! $! $!
+# Uppercase, remove first 2 chars, triple exclamation
+c *2 $1 $2 $3
+# Capitalize, duplicate, append numbers
+
+# Advanced combinations for targeted attacks
+c sa@ se3 si1 so0 $1 $2 $3 $!
+# Full transformation with numbers and special
+l D0 $a $d $m $i $n
+# Lowercase, remove first char, append 'admin'
+c R $! $2 $0 $2 $3
+# Capitalize, reverse, special char and year
+
+# Keyboard pattern rules
+c $q $w $e $r $t $y
+# Append 'qwerty'
+c $a $s $d $f
+# Append 'asdf'
+c $z $x $c $v
+# Append 'zxcv'
+
+# Multi-step transformations
+c sa@ $1 $2 $3 D3 D3
+# Capitalize, substitute, append numbers, delete chars
+u se3 si1 $! $! R
+# Uppercase, substitutions, special chars, reverse
+l *2 c sa@ $!
+# Lowercase, duplicate, capitalize, substitute, special
+
+# Custom organizational rules (examples)
+c $d $e $l $t $a
+# Append company name 'delta'
+c $s $e $c $u $r $e
+# Append 'secure'
+c $p $a $s $s
+# Append 'pass'
