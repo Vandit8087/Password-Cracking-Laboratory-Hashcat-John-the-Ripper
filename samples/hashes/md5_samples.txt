@@ -1,0 +1,24 @@
+# MD5 Hash Samples for Educational Password Cracking
+# Generated for laboratory testing purposes only
+
+# WEAK PASSWORDS
+5f4dcc3b5aa765d61d8327deb882cf99
+e10adc3949ba59abbe56e057f20f883e
+21232f297a57a5a743894a0e4a801fc3
+0d107d09f5bbe40cade3de5c71e9e9b7
+d8578edf8458ce06fbc5bb76a58c5ca4
+
+# POLICY_COMPLIANT PASSWORDS
+0cef1fb10f60529028a71f58e54ed07b
+3941de2b1cfbe343743c5a8b7b45f63a
+133987b0b6ad0c01fc0ccbdae1b95449
+d25a8fc276c44edc719bf2f6283ec684
+f925916e2754e5e03f75dd58a5733251
+
+# STRONG PASSWORDS
+95d300bb030e8186294be2a10ff04edf
+daa363fcc97f94de6549766d7370c5c1
+a2cadde5d20a2ba81e96081d7f2e5449
+b9acd73f0d59380d799cf9424db6e578
+a6d8e6ab411da8f42e01ddb842fe71df
+
